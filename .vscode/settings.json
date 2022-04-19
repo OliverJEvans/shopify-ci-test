@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.options": {
+    "configFile": ".eslintrc.js"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vetur.validation.template": false,
+  "vetur.format.defaultFormatter.html": "prettier",
+}

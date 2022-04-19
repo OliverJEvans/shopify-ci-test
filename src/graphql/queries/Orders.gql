@@ -1,0 +1,15 @@
+query Orders($customerAccessToken: String!) {
+  customer(customerAccessToken: $customerAccessToken) {
+    orders(first: 250) {
+      edges {
+        node {
+          id
+          customerUrl
+          metafield(namespace: "ratandboa", key: "aftership") {
+            value
+          }
+        }
+      }
+    }
+  }
+}

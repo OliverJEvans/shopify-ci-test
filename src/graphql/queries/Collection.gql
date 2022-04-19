@@ -1,0 +1,74 @@
+#import "../fragments/ProductImage.gql"
+
+query Collection(
+  $collection: String!
+  $first: Int!
+  $after: String
+  $product_filters: [ProductFilter!]
+  $sort: ProductCollectionSortKeys
+  $reverse: Boolean
+) {
+  collection(handle: $collection) {
+    id
+    title
+    description
+    products(
+      first: $first
+      after: $after
+      filters: $product_filters
+      sortKey: $sort
+      reverse: $reverse
+    ) {
+      pageInfo {
+        hasNextPage
+      }
+      filters {
+        id
+        label
+        type
+        values {
+          id
+          label
+          count
+          input
+        }
+      }
+      edges {
+        cursor
+        node {
+          id
+          title
+          handle
+          onlineStoreUrl
+          priceRange {
+            minVariantPrice {
+              amount
+              currencyCode
+            }
+          }
+          images(first: 3) {
+            edges {
+              node {
+                ...productImage
+              }
+            }
+          }
+          variants(first: 250) {
+            edges {
+              node {
+                id
+                title
+                availableForSale
+                quantityAvailable
+                priceV2 {
+                  amount
+                  currencyCode
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

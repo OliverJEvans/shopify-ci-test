@@ -1,0 +1,10 @@
+fragment cartLine on CartLine {
+  id
+  quantity
+  merchandise {
+    ... on ProductVariant {
+      id
+      quantityAvailable
+    }
+  }
+}

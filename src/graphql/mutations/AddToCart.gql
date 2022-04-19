@@ -1,0 +1,23 @@
+#import "../fragments/CartLine.gql"
+
+mutation addToCart($cartId: ID!, $lines: [CartLineInput!]!) {
+  cartLinesAdd(cartId: $cartId, lines: $lines) {
+    cart {
+      id
+      checkoutUrl
+      estimatedCost {
+        subtotalAmount {
+          amount
+          currencyCode
+        }
+      }
+      lines(first: 250) {
+        edges {
+          node {
+            ...cartLine
+          }
+        }
+      }
+    }
+  }
+}

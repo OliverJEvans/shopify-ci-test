@@ -1,0 +1,42 @@
+<div>
+  <footer-links />
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="helpful-link-group">
+      {% for link in linklists.footer-top-left.links %}
+        <li class="helpful-link-group__item">
+          <a href="{{ link.url }}">
+            {{ link.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <ul class="helpful-link-group">
+      {% for link in linklists.footer-bottom-right.links %}
+        <li class="helpful-link-group__item">
+          <a href="{{ link.url }}">
+            {{ link.title }}
+          </a>
+        </li>
+      {% endfor %}
+      <li class="helpful-link-group__item">
+        &copy; {{ "now" | date: "%Y" }}. Rat And Boa Limited
+      </li>
+    </ul>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.footer.settings.paragraph"
+    }
+  ]
+}
+{% endschema %}

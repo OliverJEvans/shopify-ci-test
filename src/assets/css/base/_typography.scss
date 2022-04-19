@@ -1,0 +1,60 @@
+@import "@/assets/css/helpers/_fonts.scss";
+
+@font-face {
+  font-family: 'Domaine Text';
+  src: url('https://cdn.shopify.com/s/files/1/0942/9062/files/DomaineText-Regular.woff2') format('woff2'),
+      url('https://cdn.shopify.com/s/files/1/0942/9062/files/DomaineText-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Domaine Text';
+  src: url('https://cdn.shopify.com/s/files/1/0942/9062/files/DomaineText-Light.woff2') format('woff2'),
+      url('https://cdn.shopify.com/s/files/1/0942/9062/files/DomaineText-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Domaine Text';
+  src: url('https://cdn.shopify.com/s/files/1/0942/9062/files/DomaineText-Bold.woff2') format('woff2'),
+      url('https://cdn.shopify.com/s/files/1/0942/9062/files/DomaineText-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('https://cdn.shopify.com/s/files/1/0942/9062/files/AvenirNextLTPro-Regular.woff2') format('woff2'),
+      url('https://cdn.shopify.com/s/files/1/0942/9062/files/AvenirNextLTPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('https://cdn.shopify.com/s/files/1/0942/9062/files/AvenirNextLTPro-Demi.woff2') format('woff2'),
+      url('https://cdn.shopify.com/s/files/1/0942/9062/files/AvenirNextLTPro-Demi.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: $body-font-family;
+  color: $color-dark;
+  line-height: normal;
+}
+
+button {
+  font-family: $body-font-family;
+}
+
+h1, h2, h3 {
+  font-family: $heading-font-family
+}

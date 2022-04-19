@@ -1,0 +1,69 @@
+.u {
+  // &__margin-left {
+  //   margin-left: $margin !important;
+  // }
+  // &__text-align--left {
+  //   text-align: left !important;
+  // }
+  // &__color--success {
+  //   color: $color-success !important;
+  // }
+  &__background--white {
+    background: $color-white !important;
+  }
+  // &__background--grey {
+  //   background: #F7F8F3 !important;
+  // }
+  &__visually-hidden {
+    clip: rect(0 0 0 0) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+  }
+  // &__full-width {
+  //   width: calc(100% + 40px) !important;
+  //   margin-left: -20px !important;
+  //   margin-right: -20px !important;
+  // }
+  // &__padding {
+  //   padding: $padding !important;
+  // }
+  // &__padding-horizontal {
+  //   padding-left: $padding !important;
+  //   padding-right: $padding !important;
+  // }
+  // &__padding-top--large {
+  //   padding-top: 2.7rem !important;
+  // }
+  // &__padding-bottom {
+  //   padding-bottom: $padding !important;
+  // }
+  &__padding-left--none {
+    padding-left: 0 !important;
+  }
+  &__padding-right--none {
+    padding-right: 0 !important;
+  }
+  // &__padding-bottom--small {
+  //   padding-bottom: $padding-small !important;
+  // }
+  // &__margin-bottom--none {
+  //   margin-bottom: 0 !important;
+  // }
+  // &__text--large * {
+  //   font-size: 1.8rem !important;
+  // }
+  &__hide--desktop {
+    @include respond-above(md) {
+      display: none !important;
+    }
+  }
+  &__hide--mobile {
+    @include respond-below(md) {
+      display: none !important;
+    }
+  }
+}

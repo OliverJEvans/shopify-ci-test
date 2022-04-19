@@ -1,0 +1,130 @@
+<div vue>
+    <hero heading="Another Time, Another World" link-text="Shop the collection" link-url="https://www.ratandboa.com/" :images='{smallMedia:"https://cdn.shopify.com/s/files/1/0942/9062/files/homepage-mobile.jpg",mediumMedia:"https://cdn.shopify.com/s/files/1/0942/9062/files/homepage-mobile.jpg",largeMedia:"https://cdn.shopify.com/s/files/1/0942/9062/files/homepage-desktop.jpg"}'>
+</div>
+<div vue>
+    <intro text="Rat & Boa is a celebration of our contrasting styles & personalities, a voice for our vision. Born from a shared desire to translate moods into creations that evoke beauty & empower the women of our world."/>
+</div>
+<div vue>
+    <collection-hero-group :collections='[
+        {
+          heading: "Ready to wear",
+          images: {
+            smallMedia:"https://cdn.shopify.com/s/files/1/0942/9062/files/rtw-collection-hero.jpg",
+            mediumMedia:"https://cdn.shopify.com/s/files/1/0942/9062/files/rtw-collection-hero.jpg",
+            largeMedia:"https://cdn.shopify.com/s/files/1/0942/9062/files/rtw-collection-hero.jpg",
+          },
+          links: [
+            { url: "ratandboa.com", text: "All Dresses" },
+            { url: "ratandboa.com", text: "Party Dresses" },
+            { url: "ratandboa.com", text: "Beach Dresses" },
+            { url: "ratandboa.com", text: "Work Dresses" },
+            { url: "ratandboa.com", text: "Accessories" },
+          ],
+        },
+        {
+          heading: "Ready to wear",
+          images: {
+            smallMedia:
+              "https://cdn.shopify.com/s/files/1/0942/9062/files/homepage-collections-2.jpg",
+            mediumMedia:
+              "https://cdn.shopify.com/s/files/1/0942/9062/files/homepage-collections-2.jpg",
+            largeMedia:
+              "https://cdn.shopify.com/s/files/1/0942/9062/files/homepage-collections-2.jpg",
+          },
+          links: [
+            { url: "ratandboa.com", text: "All Beachwear" },
+            { url: "ratandboa.com", text: "Bikinis" },
+            { url: "ratandboa.com", text: "Swimwear" },
+            { url: "ratandboa.com", text: "SARONGS" },
+            { url: "ratandboa.com", text: "Accessories" },
+          ],
+        },
+      ]'></collection-hero>
+</div>
+<div vue>
+<loyalty-area
+  heading="Members Only"
+  :images='{
+    smallMedia:
+      "https://cdn.shopify.com/s/files/1/0942/9062/files/loyalty-area.jpg",
+    mediumMedia:
+      "https://cdn.shopify.com/s/files/1/0942/9062/files/loyalty-area.jpg",
+    largeMedia:
+      "https://cdn.shopify.com/s/files/1/0942/9062/files/loyalty-area-desktop.jpg",
+  }'
+  :links='[
+    { url: "ratandboa.com", text: "Sign Up to Start Earning" },
+    { url: "ratandboa.com", text: "Login to Your Account" },
+  ]'/>
+</div>
+<div vue>
+    <journal-previews />
+</div>
+
+
+
+<div vue>
+    <instagram-feed heading="For the bold and spirited" subheading="Spotlight on @ratandboa" :tiles='[
+        {
+          imageUrl:
+            "https://cdn.shopify.com/s/files/1/0942/9062/files/instagram-tile-1.jpg",
+            linkUrl: "ratandboa.com",
+        },
+        {
+          imageUrl:
+            "https://cdn.shopify.com/s/files/1/1191/9918/files/instagram-tile-2.jpg",
+            linkUrl: "ratandboa.com",
+        },
+        {
+          imageUrl:
+            "https://cdn.shopify.com/s/files/1/1191/9918/files/instagram-tile-3.jpg",
+            linkUrl: "ratandboa.com",
+        },
+        {
+          imageUrl:
+            "https://cdn.shopify.com/s/files/1/1191/9918/files/instagram-tile-4.jpg",
+            linkUrl: "ratandboa.com",
+        },
+        {
+          imageUrl:
+            "https://cdn.shopify.com/s/files/1/0942/9062/files/instagram-tile-1.jpg",
+            linkUrl: "ratandboa.com",
+        },
+        {
+          imageUrl:
+            "https://cdn.shopify.com/s/files/1/0942/9062/files/instagram-tile-1.jpg",
+            linkUrl: "ratandboa.com",
+        },
+        {
+          imageUrl:
+            "https://cdn.shopify.com/s/files/1/1191/9918/files/instagram-tile-2.jpg",
+            linkUrl: "ratandboa.com",
+        },
+        {
+          imageUrl:
+            "https://cdn.shopify.com/s/files/1/1191/9918/files/instagram-tile-3.jpg",
+            linkUrl: "ratandboa.com",
+        },
+        {
+          imageUrl:
+            "https://cdn.shopify.com/s/files/1/0942/9062/files/instagram-tile-1.jpg",
+            linkUrl: "ratandboa.com",
+        },
+        {
+          imageUrl:
+            "https://cdn.shopify.com/s/files/1/1191/9918/files/instagram-tile-2.jpg",
+            linkUrl: "ratandboa.com",
+        },
+        {
+          imageUrl:
+            "https://cdn.shopify.com/s/files/1/1191/9918/files/instagram-tile-3.jpg",
+            linkUrl: "ratandboa.com",
+        },
+        {
+          imageUrl:
+            "https://cdn.shopify.com/s/files/1/1191/9918/files/instagram-tile-4.jpg",
+            linkUrl: "ratandboa.com",
+        },
+      ]'>
+    </instagram-feed>
+</div>

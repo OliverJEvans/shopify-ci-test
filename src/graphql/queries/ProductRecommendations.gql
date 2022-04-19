@@ -1,0 +1,36 @@
+#import "../fragments/ProductImage.gql"
+
+query ProductRecommendations($productId: ID!) {
+  productRecommendations(productId: $productId) {
+    id
+    title
+    onlineStoreUrl
+    priceRange {
+      minVariantPrice {
+        amount
+        currencyCode
+      }
+    }
+    images(first: 250) {
+      edges {
+        node {
+          ...productImage
+        }
+      }
+    }
+    variants(first: 250) {
+      edges {
+        node {
+          id
+          title
+          availableForSale
+          quantityAvailable
+          priceV2 {
+            amount
+            currencyCode
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+query Cart($id: ID!) {
+  cart(id: $id) {
+    checkoutUrl
+    estimatedCost {
+      totalAmount {
+        amount
+      }
+    }
+    lines(first: 250) {
+      edges {
+        node {
+          id
+          estimatedCost {
+            totalAmount {
+              amount
+            }
+          }
+          quantity
+          merchandise {
+            ... on ProductVariant {
+              product {
+                title
+              }
+              selectedOptions {
+                name
+                value
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+<div class="container">
+  <script>
+    window.NavigationBarLinks = [
+      {% for link in linklists.navigation-bar.links %}
+        {
+          active: {{link.active}},
+          open: {{link.active}} || {{link.child_active}},
+          childActive: {{link.child_active}},
+          title: "{{link.title}}",
+          url: "{{link.url}}",
+          links: [
+            {% for child_link in link.links %}
+              {
+                active: {{child_link.active}},
+                open: {{child_link.active}} || {{child_link.child_active}} || {{link.active}} || {{link.child_active}},
+                childActive: {{child_link.child_active}},
+                title: "{{child_link.title}}",
+                url: "{{child_link.url}}",
+                links: [
+                  {% for grandchild_link in child_link.links %}
+                    {
+                      active: {{grandchild_link.active}},
+                      open: {{grandchild_link.active}} || {{grandchild_link.child_active}} || {{child_link.active}} || {{child_link.child_active}},
+                      childActive: {{grandchild_link.child_active}},
+                      title: "{{grandchild_link.title}}",
+                      url: "{{grandchild_link.url}}",
+                    },
+                  {% endfor %}
+                ]
+              },
+            {% endfor %}
+          ]
+        },
+      {% endfor %}
+    ];
+  </script>
+
+  <div vue>
+    <header-component></header-component>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.header.settings.paragraph"
+    }
+  ]
+}
+{% endschema %}

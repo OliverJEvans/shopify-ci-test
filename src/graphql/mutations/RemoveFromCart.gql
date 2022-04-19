@@ -1,0 +1,28 @@
+#import "../fragments/CartLine.gql"
+
+mutation removeFromCart($cartId: ID!, $lineIds: [ID!]!) {
+  cartLinesRemove(cartId: $cartId, lineIds: $lineIds) {
+    cart {
+      id
+      checkoutUrl
+      estimatedCost {
+        subtotalAmount {
+          amount
+          currencyCode
+        }
+      }
+      lines(first: 250) {
+        edges {
+          node {
+            ...cartLine
+          }
+        }
+      }
+    }
+    userErrors {
+      code
+      field
+      message
+    }
+  }
+}

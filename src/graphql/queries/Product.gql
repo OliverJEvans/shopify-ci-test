@@ -1,0 +1,44 @@
+#import "../fragments/ProductImage.gql"
+
+query Product($product: String!, $selectedOptions: [SelectedOptionInput!]!) {
+  product(handle: $product) {
+    id
+    title
+    description
+    descriptionHtml
+    images(first: 250) {
+      edges {
+        node {
+          ...productImage
+        }
+      }
+    }
+    variants(first: 250) {
+      edges {
+        node {
+          id
+          title
+          priceV2 {
+            amount
+            currencyCode
+          }
+          availableForSale
+        }
+      }
+    }
+    options(first: 250) {
+      id
+      name
+      values
+    }
+    variantBySelectedOptions(selectedOptions: $selectedOptions) {
+      id
+      priceV2 {
+        amount
+        currencyCode
+      }
+      availableForSale
+      quantityAvailable
+    }
+  }
+}

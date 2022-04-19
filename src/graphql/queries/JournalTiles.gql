@@ -1,0 +1,21 @@
+query JournalTiles {
+  blog(handle: "journal") {
+    id
+    handle
+    title
+    articles(first: 10) {
+      edges {
+        node {
+          handle
+          title
+          excerpt
+          onlineStoreUrl
+          tags
+          image {
+            url
+          }
+        }
+      }
+    }
+  }
+}

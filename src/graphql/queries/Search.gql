@@ -1,0 +1,40 @@
+#import "../fragments/ProductImage.gql"
+
+query Search($searchQuery: String!) {
+  products(first: 250, query: $searchQuery) {
+    edges {
+      node {
+        id
+        title
+        onlineStoreUrl
+        priceRange {
+          minVariantPrice {
+            amount
+            currencyCode
+          }
+        }
+        images(first: 250) {
+          edges {
+            node {
+              ...productImage
+            }
+          }
+        }
+        variants(first: 250) {
+          edges {
+            node {
+              id
+              title
+              availableForSale
+              quantityAvailable
+              priceV2 {
+                amount
+                currencyCode
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

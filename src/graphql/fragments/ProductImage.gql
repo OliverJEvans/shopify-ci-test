@@ -1,0 +1,5 @@
+fragment productImage on Image {
+  id
+  altText
+  src
+}
